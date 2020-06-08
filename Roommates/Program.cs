@@ -27,23 +27,42 @@ namespace Roommates
                 Console.WriteLine($"{room.Id} {room.Name} {room.MaxOccupancy}");
             }
 
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Getting Room with Id 1");
+            //Console.WriteLine("----------------------------");
+            //Console.WriteLine("Getting Room with Id 1");
 
-            Room singleRoom = roomRepo.GetById(1);
+            //Room singleRoom = roomRepo.GetById(1);
 
-            Console.WriteLine($"{singleRoom.Id} {singleRoom.Name} {singleRoom.MaxOccupancy}");
+            //Console.WriteLine($"{singleRoom.Id} {singleRoom.Name} {singleRoom.MaxOccupancy}");
 
-            Room bathroom = new Room
-            {
-                Name = "Bathroom",
-                MaxOccupancy = 1
-            };
+            //Room bathroom = new Room
+            //{
+            //    Name = "Bathroom",
+            //    MaxOccupancy = 1
+            //};
 
-            roomRepo.Insert(bathroom);
+            //roomRepo.Insert(bathroom);
+
+            //Console.WriteLine("-------------------------------");
+            //Console.WriteLine($"Added the new Room with id {bathroom.Id}");
+
+            //Room roomUpdate = roomRepo.GetById(1);
+            //Console.WriteLine("-------------------------------");
+            //Console.WriteLine($"update Room Name with id {roomUpdate.Id}");
+            //roomUpdate.Name = Console.ReadLine();
+            //roomRepo.Update(roomUpdate);
+
+            //Console.WriteLine("-------------------------------");
+            //roomRepo.Delete(8);
+            //Console.WriteLine("Room was deleted");
+
+
+            List<Room> allRoomsAgain = roomRepo.GetAll();
 
             Console.WriteLine("-------------------------------");
-            Console.WriteLine($"Added the new Room with id {bathroom.Id}");
+            foreach (Room room in allRoomsAgain)
+            {
+                Console.WriteLine($"{room.Id} {room.Name} {room.MaxOccupancy}");
+            }
         }
     }
 }
